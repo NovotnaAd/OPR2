@@ -17,6 +17,6 @@ public class Fine {
 
     @Override
     public String toString() {
-        return "Fine{cars license plate= " + licensePlate + reason='" + reason + "', amount=" + amount + "}";
+        return "Fine! Reason for fine is: '" + reason + "and the amount of money you have to pay is: '" + amount;
     }
 }

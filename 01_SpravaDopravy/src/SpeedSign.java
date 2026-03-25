@@ -9,4 +9,8 @@ public class SpeedSign extends Sign {
     public boolean isViolated(Car car) {
         return car.getSpeed() > maxSpeed;
     }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
 }

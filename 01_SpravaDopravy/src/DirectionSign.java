@@ -1,4 +1,5 @@
 public class DirectionSign extends Sign {
+
     private CarAction allowedDirection;
 
     public DirectionSign(CarAction allowedDirection) {
@@ -8,5 +9,9 @@ public class DirectionSign extends Sign {
     @Override
     public boolean isViolated(Car car) {
         return car.getAction() != allowedDirection;
+    }
+
+    public CarAction getAllowedDirection() {
+        return allowedDirection;
     }
 }
