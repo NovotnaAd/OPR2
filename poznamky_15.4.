@@ -13,3 +13,49 @@ CSV
 
 name;age;bankAccount
 Martin; 3; CZ000
+
+
+IntelliJ: 
+
+import java.io.*;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.file.Files;
+
+public class Main {
+    public static void main(String[] args) {
+        URL fileUrl = Main.class.getClassLoader().getResource("numbers.txt");
+        String filePathString = URLDecoder.decode(fileUrl.getFile());
+        File file = new File(filePathString);
+        System.out.println("Soubor existuje: " + file.exists());
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))){
+
+            String line = bufferedReader.readLine();
+            if(line == null){
+                System.out.println("Soubor je prázdný");
+            }else {
+                while(line!= null){
+                    System.out.println(line);
+                    line = bufferedReader.readLine();
+                }
+            }
+
+            System.out.println(line);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Soubor neexistuje: ");
+        } catch (IOException e){
+            System.out.println("Soubor neexistuje: ");
+        }
+        //stejně i u csv
+        // -------------------------------------------------------------------------
+        URL jsonfileUrl = Main.class.getClassLoader().getResource("input.json");
+        String jsonFilePathString = URLDecoder.decode(fileUrl.getFile());
+        File jsonFile = new File(jsonFilePathString);
+        //String jsonFileContent = Files.readAllLines(jsonFile.toPath());
+
+    }
+
+}
+
