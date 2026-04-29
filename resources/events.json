@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "music festival",
+    "type": "MUSIC",
+    "timestamp": "2026-06-06T18:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "tech konference",
+    "type": "CONFERENCE",
+    "timestamp": "2026-06-06T15:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "music concert",
+    "type": "MUSIC",
+    "timestamp": "2026-06-06T16:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "music festival vol.2",
+    "type": "MUSIC",
+    "timestamp": "2026-06-06T13:00:00Z"
+  }
+]
